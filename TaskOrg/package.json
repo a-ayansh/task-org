@@ -1,0 +1,28 @@
+{
+  "name": "taskorg",
+  "version": "1.0.0",
+  "description": "Full-stack todo application with authentication",
+  "main": "auth/index.js",
+  "scripts": {
+    "start": "node auth/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd auth && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm install && npm run build",
+    "install-server": "cd auth && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "render-build": "npm run install-all && npm run build"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {},
+  "keywords": ["todo", "mern", "fullstack", "authentication"],
+  "author": "Aayansh03",
+  "license": "MIT"
+}
